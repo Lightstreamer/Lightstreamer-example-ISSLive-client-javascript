@@ -16,7 +16,7 @@ to the clients subscribing to it:
 the pushed data is not simulated, is the actual telemetry data from the International Space Station.
 
 The demo contains a list of categories: select a category to show the list of available symbols. Both categories and symbols are currently hard coded into the application;
-you can check out the full dictionary on the [official ISS Live! website](http://spacestationlive.jsc.nasa.gov/resources/adcoTelemetry.html). 
+you can check out the full dictionary on the [official ISS Live! website](http://www.isslive.com). 
 
 Each symbol is represented as an item in the Lightstreamer data model: single-item subscriptions are used to add/remove elements to the list of monitored symbols.
 Through the Lightstreamer client library it is possible to limit the frequency of the updates per each single item and the bandwidth of the whole dashboard: 
@@ -39,7 +39,7 @@ upgrade their version.
 
 ## See Also
 
-* [ISS Live!](http://spacestationlive.nasa.gov/displays/index.html)
+* [ISS Live!](http://www.isslive.com)
 * [Space Station Telemetry App 2015 Challenge](https://2015.spaceappschallenge.org/challenge/space-station-telemetry-app/)
 
 ## Lightstreamer Compatibility Notes
