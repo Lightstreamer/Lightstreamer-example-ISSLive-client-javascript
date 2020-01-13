@@ -63,12 +63,12 @@ require(["js/lsClient"],function(lsClient) {
     change: function(event, ui) { 
       var v = formatBandwidthValue(ui.value);
       $("#currentRequestedBandwidth").text(v);
-      lsClient.connectionOptions.setMaxBandwidth(v);
+      lsClient.connectionOptions.setRequestedMaxBandwidth(v);
     }
   });
   
   var initialValue = formatBandwidthValue(INIT_BW);
-  lsClient.connectionOptions.setMaxBandwidth(initialValue);
+  lsClient.connectionOptions.setRequestedMaxBandwidth(initialValue);
   $("#currentRequestedBandwidth").text(initialValue);
  
   
