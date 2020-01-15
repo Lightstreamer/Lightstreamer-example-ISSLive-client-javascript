@@ -44,6 +44,6 @@ upgrade their version.
 
 ## Lightstreamer Compatibility Notes
 
-* Compatible with Lightstreamer JavaScript Client library version 8.0 or newer.
+* Compatible with Lightstreamer Web Client library version 8.0 or newer.
 
-* For a version of this example compatible with Lightstreamer SDK for JavaScript Clients version 7.x or earlier, please refer to [this tag](https://github.com/Lightstreamer/Lightstreamer-example-ISSLive-client-javascript/releases/tag/latest-for-client-7.x).
+* For a version of this example compatible with Lightstreamer SDK for Web Clients version 7.x or earlier, please refer to [this tag](https://github.com/Lightstreamer/Lightstreamer-example-ISSLive-client-javascript/releases/tag/latest-for-client-7.x).
