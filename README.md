@@ -4,9 +4,9 @@ The Lightstreamer ISSLive Demo is a simple dashboard application fed with live t
 
 ## Live Demo
 
-[![screenshot](snapshot_large.png)](http://demos.lightstreamer.com/ISSLive)
+[![screenshot](snapshot_large.png)](https://demos.lightstreamer.com/ISSLive/)
 
-### [![](http://demos.lightstreamer.com/site/img/play.png) View live demo](http://demos.lightstreamer.com/ISSLive)
+### [![](http://demos.lightstreamer.com/site/img/play.png) View live demo](https://demos.lightstreamer.com/ISSLive/)
 
 ## Details
 
