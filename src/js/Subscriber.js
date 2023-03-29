@@ -18,7 +18,7 @@ define(["Subscription","DynaGrid","./lsClient","./domReady!"],
     function(Subscription,DynaGrid,lsClient) {
   
   var SCHEMA = ["TimeStamp","Value","Status.Class","Status.Indicator","Status.Color","CalibratedData"];
-  var DEFAULT_SUBSCRIPTIONS = ["TIME_000001","AIRLOCK000049"];
+  var DEFAULT_SUBSCRIPTIONS = ["TIME_000001","AIRLOCK000049","NODE3000005","NODE3000008","NODE3000009","S0000005","AIRLOCK000005","P1000003"];
 
   var FREQUENCY_VALUES = [0.1, 0.2, 0.4, 0.5, 1, 2, 5, 10, 20, "unlimited"];
   var INITIAL_FRQUENCY = FREQUENCY_VALUES.length-1;
