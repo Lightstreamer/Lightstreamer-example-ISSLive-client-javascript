@@ -22,7 +22,7 @@ Each symbol is represented as an item in the Lightstreamer data model: single-it
 Through the Lightstreamer client library it is possible to limit the frequency of the updates per each single item and the bandwidth of the whole dashboard: 
 sliders to control such aspects are available in this demo.
 
-A minimal version of this application is also available on this project under the src_minimal folder (you can [see it live here](http://demos.lightstreamer.com/ISSLive/issmin.html) ). This version is only comprised of a single html file that subscribes to a fixed set of symbols (the space station position and velocity data): you can use it as 
+A minimal version of this application is also available on this project as issmin.html (you can [see it live here](http://demos.lightstreamer.com/ISSLive/issmin.html) ). This version is only comprised of a single html file that subscribes to a fixed set of symbols (the space station position and velocity data): you can use it as 
 an "hello world" to help you write your own client application based on the data offered by the public server.
 
 ## Install
