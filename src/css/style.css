@@ -13,8 +13,32 @@
   See the License for the specific language governing permissions and
   limitations under the License.
 */
-
-/* layout */
+.banner {
+  width: 100%;
+  height: 200px;
+  position: relative;
+  background-image: url("../images/banner.jpg");
+  background-size: cover;
+  background-position: center;
+}  
+.logo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}  
+.banner p {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: calc(50% + 50px);
+  transform: translateY(-50%);
+  font-family: "Amazon Ember", Arial, Helvetica, Sans-serif;
+  font-size: x-large;
+  color: #689a68;
+  font-weight: bold;
+  text-align: center;
+}
 .ribbon {
   background-color: #003D06;
   overflow: hidden;
@@ -58,7 +82,7 @@ body {
   height: 150px;
 }
 .row.content {
-  top:150px;
+  top:200px;
   bottom: 0;
 }
 

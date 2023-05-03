@@ -16,7 +16,7 @@
 
 define(["LightstreamerClient","StatusWidget"],function(LightstreamerClient,StatusWidget) {
   var lsClient = new LightstreamerClient("https://push.lightstreamer.com","ISSLIVE");
-  lsClient.addListener(new StatusWidget("right", "0px", true));
+  lsClient.addListener(new StatusWidget("left", "0px", true));
   lsClient.addListener({
     onStatusChange: function(newStatus) {
       console.log("Client status:" + newStatus);
