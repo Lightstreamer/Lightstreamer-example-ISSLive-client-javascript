@@ -14,14 +14,18 @@
   limitations under the License.
 */
 .banner {
-  width: 100%;
-  height: 200px;
+  height: 230px; 
+  background-position: bottom; 
+  padding-bottom: 30px;
+  /* width: 100%; */
+  /* height: 200px; */
   position: relative;
   background-image: url("../images/banner.jpg");
   background-size: cover;
-  background-position: center;
+  /* background-position: center; */
 }  
 .logo {
+  width: 400px;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -35,7 +39,7 @@
   transform: translateY(-50%);
   font-family: "Amazon Ember", Arial, Helvetica, Sans-serif;
   font-size: x-large;
-  color: #689a68;
+  color: #00E82F;
   font-weight: bold;
   text-align: center;
 }
@@ -82,7 +86,7 @@ body {
   height: 150px;
 }
 .row.content {
-  top:200px;
+  top:300px;
   bottom: 0;
 }
 
@@ -129,7 +133,7 @@ body {
 /* Menu */
 
 .menuTitle {
-  color: #689a68;
+  color: #00E82F;
   font-weight: bold;
   font-size: 20px;
 }
@@ -182,7 +186,7 @@ body {
   float: left;
   margin: 10px 5px;
   border: 1px;
-  color: #689a68;
+  color: #00E82F;
   font-weight: bold;
 }
 
@@ -195,7 +199,7 @@ body {
 }
 
 #data thead {
-  color: #689a68;
+  color: #00E82F;
   font-weight: bold;
   font-size: 20px;
 }
