@@ -1,0 +1,19 @@
+<div class="col menu">
+  <div class="menuTitle">Disciplines</div>
+  <div *ngFor="let discipline of disciplines">
+    <div class="button" [ngClass]="discipline.expanded ? 'highlighted' : ''" 
+    (click)="expandDiscipline(discipline)">{{discipline.name}}</div>
+    
+    <div [hidden]="!discipline.expanded" class="itemList">
+     <div class="menuTitle">Symbols</div>
+     <div *ngFor="let item of discipline.items">
+       <div class="button item" (click)="subscribe(item.name)" [class]="{subscribed: item.subscribed, unsubscribed: !item.subscribed, highlighted: item.subscribed}">{{item.name}}
+        <img src="assets/images/help.png" attr.data-tooltip="{{item.description}}" />
+      </div>
+       
+     </div>
+   </div>
+
+  </div>
+  
+</div>

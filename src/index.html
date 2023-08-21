@@ -1,121 +1,73 @@
-<!DOCTYPE html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>International Space Station Live</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
 
- <!--
-  LIGHTSTREAMER - www.lightstreamer.com
-  ISSLive Demo
-  
-  Copyright (c) Lightstreamer Srl
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+  <link rel="stylesheet" type="text/css" href="assets/css/jquery-ui-1.10.4.custom.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/qtip2/2.2.0/jquery.qtip.min.css" />
 
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qtip2/2.2.0/jquery.qtip.min.js"></script>
+  <script src="assets/js/jquery-ui-1.10.4.custom.min.js"></script>
+</head>
+<body>
 
-       http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
--->
-
-<html ng-app>
-  <head>
-    <meta name="robots" content="noindex">
-    
-    <title>International Space Station Live</title>
-  
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <link rel="stylesheet" type="text/css" href="css/jquery-ui-1.10.4.custom.min.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/qtip2/2.2.0/jquery.qtip.min.css" />
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qtip2/2.2.0/jquery.qtip.min.js"></script>
-    <script src="js/jquery-ui-1.10.4.custom.min.js"></script>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.10/angular.min.js"></script>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.9/require.min.js"></script>
-    <script language="JavaScript" src="https://unpkg.com/lightstreamer-client-web/lightstreamer.min.js"></script>
-    
-    
-    
-    <script src="index.js"></script>
-  </head>
-  <body ng-cloak>
-  
   <div class="ribbon" style="z-index: 1;">
     <a href="https://github.com/Lightstreamer/Lightstreamer-example-ISSLive-client-javascript">Fork me on GitHub</a>
   </div>
   
   <div class="banner">
-    <img src="images/nasa.png" alt="Nasa">
-    <img src="images/logo.png" alt="Logo" class="logo">
+    <img src="assets/images/nasa.png" alt="Nasa">
+    <img src="assets/images/logo.png" alt="Logo" class="logo">
     <p style="color: #fff">International Space Station<p>
     <p style="color: #00E82F; font-size: large; top: calc(50% + 90px);">Live Telemetry Data</p>
   </div>
-    
-    <div class="content row">
-    
-     <div ng-controller="MenuController" class="col menu">
-       <div class="menuTitle">Disciplines</div>
-       <div ng-repeat="discipline in disciplines">
-         <div class="button" ng-class="{highlighted: discipline.expanded}" ng-click="expandDiscipline(discipline)">{{discipline.name}}</div>
-         
-         <div ng-show="discipline.expanded" class="itemList">
-          <div class="menuTitle">Symbols</div>
-          <div ng-repeat="item in discipline.items">
-            <div class="button item" ng-click="subscribe(item.name)" ng-class="{subscribed: item.subscribed, unsubscribed: !item.subscribed, highlighted: item.subscribed}">{{item.name}}<img src="images/help.png" data-tooltip="{{item.description}}" /></div>
-            
-           
-          </div><!-- item in discipline.items -->
-        </div><!-- itemList -->
-       </div><!-- discipline in disciplines -->
-       
-       
-     </div><!-- MenuController -->
 
+  <div class="content row">
+
+    <app-root></app-root>
     
-      <div id="data" class="col">
-        <div id="bandwidth">
-          <span>Throttle bandwidth:</span><div id="bandwidthSlider" class="slider"></div><span id="currentRequestedBandwidth"></span><span>kbps</span> 
-        </div>
-        <table>
-          <thead>
-            <tr>
-              <td></td>
-              <td width="80">Discipline</td>
-              <td width="80">Symbol</td>
-              <td width="200">Time</td>
-              <td width="200">Value</td>
-              <td width="210">Max Frequency</td>
-              <td width="200">Description</td>
-            </tr>
-          </thead>
-          <tbody>
-            <tr id="grid" data-source="lightstreamer" style="display:none">
-              <td class="unsubscribeButton button" data-source="lightstreamer" data-field="Name" data-update="data-name" data-name=""></td>
-              <td data-source="lightstreamer" data-field="Discipline">-</td>
-              <td data-source="lightstreamer" data-field="Name">-</td>
-              <td data-source="lightstreamer" data-field="TimeStamp">-</td>
-              <td data-source="lightstreamer" data-field="Value">-</td>
-              <td>
-                <div id="frequency">
-                  <div class="slider"></div><span class="frequency"></span><span> updates per second</span>
-                </div>
-              </td>
-              <td data-source="lightstreamer" data-field="Description"></td>
-            </tr>
-          </tbody>
-        
-        </table>
-        
-      </div><!-- data -->
+    <div id="data" class="col">
+      <div id="bandwidth">
+        <span>Throttle bandwidth:</span><div id="bandwidthSlider" class="slider"></div><span id="currentRequestedBandwidth"></span><span>kbps</span> 
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <td></td>
+            <td width="80">Discipline</td>
+            <td width="80">Symbol</td>
+            <td width="200">Time</td>
+            <td width="200">Value</td>
+            <td width="210">Max Frequency</td>
+            <td width="200">Description</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr id="grid" data-source="lightstreamer" style="display:none">
+            <td class="unsubscribeButton button" data-source="lightstreamer" data-field="Name" data-update="data-name" data-name=""></td>
+            <td data-source="lightstreamer" data-field="Discipline">-</td>
+            <td data-source="lightstreamer" data-field="Name">-</td>
+            <td data-source="lightstreamer" data-field="TimeStamp">-</td>
+            <td data-source="lightstreamer" data-field="Value">-</td>
+            <td>
+              <div id="frequency">
+                <div class="slider"></div><span class="frequency"></span><span> updates per second</span>
+              </div>
+            </td>
+            <td data-source="lightstreamer" data-field="Description"></td>
+          </tr>
+        </tbody>
       
-    </div><!-- central row -->
+      </table>
+    </div>
+    
+  </div>
 
-
-
-
-  </body>
+</body>
 </html>
