@@ -22,20 +22,23 @@ Each symbol is represented as an item in the Lightstreamer data model: single-it
 Through the Lightstreamer client library it is possible to limit the frequency of the updates per each single item and the bandwidth of the whole dashboard: 
 sliders to control such aspects are available in this demo.
 
-A minimal version of this application is also available on this project as issmin.html (you can [see it live here](http://demos.lightstreamer.com/ISSLive/issmin.html) ). This version is only comprised of a single html file that subscribes to a fixed set of symbols (the space station position and velocity data): you can use it as 
-an "hello world" to help you write your own client application based on the data offered by the public server.
-
 ## Install
 
 The adapter set used by this demo application is not available to be installed on a local Lightstreamer Server. As per now, and for the foreseeable future, the
-server hosted at push.lightstreamer.com can be used to feed a local version of the client application.
+server hosted at *push.lightstreamer.com* can be used to feed a local version of the client application.
 
 * Download this project.
-* Deploy this demo on the Lightstreamer Server (used as Web server) or in any external Web Server: copy there the contents of the `/src` folder of this project.
-The client demo configuration is already pointing to the correct Lightstreamer Server.
-* Lightstreamer JS client, RequireJS, AngularJS and jQuery are currently hot-linked in the html page: you may want to replace them with a local version and/or to 
-upgrade their version.
-* Open your browser and point it to to the newly deployed folder.
+* Install the Angular CLI: open a terminal window and run the command `npm install -g @angular/cli` (Angular requires an [active LTS or maintenance LTS](https://nodejs.org/about/releases) version of Node.js).
+* Change the current directory to the location of the file `package.json` and issue the commands `npm install` to install Angular libraries.
+* Run the command `ng serve --open` (the command launches a web server, watches your files, and rebuilds the app as you make changes to those files.)
+
+The client connects to the host `https://push.lightstreamer.com`. If you need to target a different Lightstreamer server, please search for this line:
+```ts
+lsClient = new LightstreamerClient
+```
+in `lsClient.ts` and change it accordingly.
+
+The demo is now ready to be launched.
 
 ## See Also
 
@@ -44,6 +47,8 @@ upgrade their version.
 
 ## Lightstreamer Compatibility Notes
 
-* Compatible with Lightstreamer Web Client library version 8.0 or newer.
+* Compatible with Lightstreamer Web Client library version 9.0+ and Lightstreamer Server 7.4+.
+
+* For a version of this example compatible with Lightstreamer SDK for Web Clients version 8.x or earlier, please refer to [this tag](https://github.com/Lightstreamer/Lightstreamer-example-ISSLive-client-javascript/releases/tag/for-client-8.x).
 
 * For a version of this example compatible with Lightstreamer SDK for Web Clients version 7.x or earlier, please refer to [this tag](https://github.com/Lightstreamer/Lightstreamer-example-ISSLive-client-javascript/releases/tag/latest-for-client-7.x).
