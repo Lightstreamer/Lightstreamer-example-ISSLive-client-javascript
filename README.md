@@ -15,7 +15,7 @@ public Lightstreamer Server at push.lightstreamer.com. The incoming data is retr
 to the clients subscribing to it: 
 the pushed data is not simulated, is the actual telemetry data from the International Space Station.
 
-The demo contains a list of categories: select a category to show the list of available symbols. Both categories and symbols are currently hard coded into the application. You can check out the full symbol dictionary [here](http://www.isslive.com](https://github.com/Lightstreamer/Lightstreamer-example-ISSLive-client-javascript/blob/master/src/assets/PUIList.xml). 
+The demo contains a list of categories: select a category to show the list of available symbols. Both categories and symbols are currently hard coded into the application. You can check out the full symbol dictionary [here](https://github.com/Lightstreamer/Lightstreamer-example-ISSLive-client-javascript/blob/master/src/assets/PUIList.xml). 
 
 Each symbol is represented as an item in the Lightstreamer data model: single-item subscriptions are used to add/remove elements to the list of monitored symbols.
 Through the Lightstreamer client library it is possible to limit the frequency of the updates per each single item and the bandwidth of the whole dashboard: 
