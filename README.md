@@ -15,8 +15,7 @@ public Lightstreamer Server at push.lightstreamer.com. The incoming data is retr
 to the clients subscribing to it: 
 the pushed data is not simulated, is the actual telemetry data from the International Space Station.
 
-The demo contains a list of categories: select a category to show the list of available symbols. Both categories and symbols are currently hard coded into the application;
-you can check out the full dictionary on the [official ISS Live! website](http://www.isslive.com). 
+The demo contains a list of categories: select a category to show the list of available symbols. Both categories and symbols are currently hard coded into the application. You can check out the full symbol dictionary [here]([http://www.isslive.com](https://github.com/Lightstreamer/Lightstreamer-example-ISSLive-client-javascript/blob/master/src/assets/PUIList.xml)). 
 
 Each symbol is represented as an item in the Lightstreamer data model: single-item subscriptions are used to add/remove elements to the list of monitored symbols.
 Through the Lightstreamer client library it is possible to limit the frequency of the updates per each single item and the bandwidth of the whole dashboard: 
@@ -42,8 +41,9 @@ The demo is now ready to be launched.
 
 ## See Also
 
-* [ISS Live!](http://www.isslive.com)
-* [Space Station Telemetry App 2015 Challenge](https://2015.spaceappschallenge.org/challenge/space-station-telemetry-app/)
+There are other projects powered by the real-time ISS data streamed by our Lightstreamer Server. In particular, the [ISS Mimic project](https://github.com/ISS-Mimic/Mimic) has developed a moving 3D printed model of the International Space Station that uses the actual ISS live telemetry to mimic the actual positioning of the ISS solar arrays and radiators! They also visualize all of the ISS public telemetry in informative ways.
+* [ISS Mimic Dashboard](https://iss-mimic.github.io/Mimic/dashboard.html)
+* [Explanatory video showing the 3d-printed ISS model](https://www.youtube.com/watch?v=W9iZBjzOEEQ)
 
 ## Lightstreamer Compatibility Notes
 
