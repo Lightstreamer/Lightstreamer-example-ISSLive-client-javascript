@@ -75,7 +75,7 @@ body {
   color: #FFF; 
   font-family: sans-serif;
 }
-.row, .col { overflow: hidden; position: absolute; border: 1px solid black}
+.row, .col { position: absolute; border: 1px solid black}
 .row { left: 0; right: 0; }
 .col { top: 0; bottom: 0; }
 .scroll-x { overflow-x: auto; }
@@ -86,6 +86,7 @@ body {
   height: 150px;
 }
 .row.content {
+  margin-top: 10px;
   top:260px;
   bottom: 0;
 }
@@ -93,16 +94,12 @@ body {
 .col.menu {
   margin-top: 40px;
   width: 200px;
-  border-top: 1px solid #FFF;
-  border-right: 1px solid #FFF;
-  overflow: visible;
 }
 
 .col#data {
   left: 200px;
   right: 0;
   padding-left: 20px;
-  overflow-y: auto;
 }
 
 /* global */
@@ -157,8 +154,7 @@ body {
   left: 199px;
   width: 220px;
   background-color: #000;
-  border-right: 1px solid #FFF;
-  border-top: 1px solid #FFF;
+  border: 1px solid #FFF;
   z-index: 3;
   overflow-y: auto;
 }
@@ -178,17 +174,14 @@ body {
 /* Contents */
 
   /* bandwidth */
-#bandwidth div {
-  float: left;
+#bandwidth {
+  text-align: right;
 }
 
 #bandwidth span {
-  display: block;
-  float: left;
   margin: 10px 5px;
   border: 1px;
-  color: #00E82F;
-  font-weight: bold;
+  color: white;
 }
 
   /* data */
